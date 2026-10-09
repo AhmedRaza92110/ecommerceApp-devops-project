@@ -4,3 +4,29 @@
 out/
 dist/
 .next/
+
+
+
+# Terraform local data and state
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+terraform.tfvars
+*.tfplan
+
+# Node.js
+node_modules/
+.next/
+out/
+coverage/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Operating system
+.DS_Store
+Thumbs.db
