@@ -198,7 +198,7 @@ resource "aws_iam_role_policy" "codepipeline" {
         Resource = aws_iam_role.codebuild.arn
         Condition = {
           StringEquals = {
-            "iam:PassedToService" = "codebuild.amazonaws.com"
+            "iam:PassedToService" = ["codebuild.amazonaws.com"]
           }
         }
       },
@@ -213,6 +213,7 @@ resource "aws_iam_role_policy" "codepipeline" {
     ]
   })
 }
+
 
 # CodeBuild project: npm install, tests, Next.js production build
 resource "aws_codebuild_project" "website" {
